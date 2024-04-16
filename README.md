@@ -4,8 +4,8 @@ Members: Jasob Bube (dot product)
          Alexandre Leal (particle effect)
          Soosung Yang (sound effect)
 
-Dot Product: Added "Kids" that you have to pick up and save before you leave. There are 4.
-You can't leave unless you collect all 4. Dot proudct is used so that the kids always face the player.
+Dot Product: Added "Kids" that you pick up before you leave. There are 4.
+You can't leave unless you collect all 4. The dot product is used so that the kids always face the player.
          
 Sound effect: Added sound effects to the start of the game and for collecting pickups.
 Audio Source: https://pixabay.com/sound-effects/game-start-6104/ (game start)
