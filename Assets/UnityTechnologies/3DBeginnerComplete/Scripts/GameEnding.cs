@@ -13,6 +13,8 @@ public class GameEnding : MonoBehaviour
     public AudioSource exitAudio;
     public CanvasGroup caughtBackgroundImageCanvasGroup;
     public AudioSource caughtAudio;
+    public ParticleSystem caughtParticles;
+    public ParticleSystemForceField playerField;
 
     bool m_IsPlayerAtExit;
     bool m_IsPlayerCaught;
@@ -39,22 +41,26 @@ public class GameEnding : MonoBehaviour
 
         if (m_IsPlayerAtExit && score == 4)
         {
+            caughtParticles.startColor = Color.green;
             EndLevel (exitBackgroundImageCanvasGroup, false, exitAudio);
         }
         else if (m_IsPlayerCaught)
         {
+            caughtParticles.startColor = Color.red;
             EndLevel (caughtBackgroundImageCanvasGroup, true, caughtAudio);
         }
     }
 
     void EndLevel (CanvasGroup imageCanvasGroup, bool doRestart, AudioSource audioSource)
     {
+        playerField.enabled = false;
         if (!m_HasAudioPlayed)
         {
+            caughtParticles.Play();
             audioSource.Play();
             m_HasAudioPlayed = true;
         }
-            
+
         m_Timer += Time.deltaTime;
         imageCanvasGroup.alpha = m_Timer / fadeDuration;
 
