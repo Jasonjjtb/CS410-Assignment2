@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody m_Rigidbody;
     AudioSource m_AudioSource;
     public AudioSource collect_AudioSource;
+    public ParticleSystem collect_ParticleSystem;
     Vector3 m_Movement;
     Quaternion m_Rotation = Quaternion.identity;
 
@@ -74,6 +75,9 @@ public class PlayerMovement : MonoBehaviour
         {
             // Plays audio when picked up
             collect_AudioSource.Play();
+
+            // Plays particles when picked up
+            collect_ParticleSystem.Play();
 
             // Deactivate the collided object (making it disappear).
             other.gameObject.SetActive(false);
