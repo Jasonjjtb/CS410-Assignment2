@@ -1,11 +1,11 @@
 # CS410-Assignment2
-Members: Jasob Bube (dot product)
+Members: Jason Bube (dot product)
          JT Earle (linear interpolation)
          Alexandre Leal (particle effect)
          Soosung Yang (sound effect)
 
-Dot Product: Added "Kids" that you have to pick up and save before you leave. There are 4.
-You can't leave unless you collect all 4. Dot proudct is used so that the kids always face the player.
+Dot Product: Added "Kids" that you pick up and save before you leave. There are 4.
+You can't leave unless you collect all 4. The dot product is used so that the kids always face the player.
          
 Particle Effect: Added particle effects for picking up "Kids" and when the game ends. When the game ends to an enemy, the player emits a red particle. When the game ends with the player reaching the end, the player emits a green particle.
 Particle Source: Default Unity Particles.
